@@ -1,0 +1,82 @@
+[
+  {
+    "code": "def add(a, b):\n    return a + b",
+    "summary": "This function adds two numbers."
+  },
+  {
+    "code": "def is_positive(n):\n    return n > 0",
+    "summary": "This function checks whether a number is positive."
+  },
+  {
+    "code": "def clamp(value, low, high):\n    return max(low, min(value, high))",
+    "summary": "This function clamps a value within a range."
+  },
+  {
+    "code": "def average(nums):\n    return sum(nums) / len(nums)",
+    "summary": "This function computes the average of a list of numbers."
+  },
+  {
+    "code": "def unique_items(items):\n    return list(set(items))",
+    "summary": "This function removes duplicate items from a list."
+  },
+  {
+    "code": "def invert_map(d):\n    return {v: k for k, v in d.items()}",
+    "summary": "This function inverts a dictionary by swapping keys and values."
+  },
+  {
+    "code": "def merge_dicts(a, b):\n    merged = a.copy()\n    merged.update(b)\n    return merged",
+    "summary": "This function merges two dictionaries into one."
+  },
+  {
+    "code": "def filter_even(nums):\n    return [n for n in nums if n % 2 == 0]",
+    "summary": "This function filters even numbers from a list."
+  },
+  {
+    "code": "def count_words(text):\n    return len(text.split())",
+    "summary": "This function counts the number of words in a string."
+  },
+  {
+    "code": "def read_first_line(path):\n    with open(path, 'r', encoding='utf-8') as handle:\n        return handle.readline().strip()",
+    "summary": "This function reads the first line of a file."
+  },
+  {
+    "code": "def write_text(path, content):\n    with open(path, 'w', encoding='utf-8') as handle:\n        handle.write(content)",
+    "summary": "This function writes text content to a file."
+  },
+  {
+    "code": "import os\n\n\ndef ensure_folder(path):\n    if not os.path.exists(path):\n        os.makedirs(path)\n    return path",
+    "summary": "This function creates a folder if it does not exist."
+  },
+  {
+    "code": "import os\n\n\ndef list_py_files(folder):\n    return [f for f in os.listdir(folder) if f.endswith('.py')]",
+    "summary": "This function lists Python files in a folder."
+  },
+  {
+    "code": "def safe_divide(a, b):\n    try:\n        return a / b\n    except ZeroDivisionError:\n        return 0",
+    "summary": "This function divides two numbers and handles division by zero."
+  },
+  {
+    "code": "def parse_int(value):\n    try:\n        return int(value)\n    except ValueError:\n        return None",
+    "summary": "This function converts a string to an integer with error handling."
+  },
+  {
+    "code": "import json\n\n\ndef load_json(path):\n    with open(path, 'r', encoding='utf-8') as handle:\n        return json.load(handle)",
+    "summary": "This function loads JSON data from a file."
+  },
+  {
+    "code": "import json\n\n\ndef dumps_compact(data):\n    return json.dumps(data, separators=(',', ':'))",
+    "summary": "This function serializes data to compact JSON."
+  },
+  {
+    "code": "import requests\n\n\ndef fetch_json(url):\n    response = requests.get(url, timeout=10)\n    response.raise_for_status()\n    return response.json()",
+    "summary": "This function fetches JSON from a URL."
+  },
+  {
+    "code": "import requests\n\n\ndef post_payload(url, payload):\n    response = requests.post(url, json=payload, timeout=10)\n    response.raise_for_status()\n    return response.status_code",
+    "summary": "This function sends a JSON payload with an HTTP POST."
+  },
+  {
+    "code": "def flatten(matrix):\n    return [item for row in matrix for item in row]",
+    "summary": "This function flattens a 2D list into a 1D list."
+  }
+]

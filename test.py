@@ -1,44 +1,45 @@
 import math
+import json
 
-class DataProcessor:
-    def __init__(self, data):
-        self.d = data # Smell: Single letter variable
+def process_and_analyze_complex_dataset_with_logic(data_input):
+    """
+    This is a long method designed to trigger the 'Long Method' smell
+    while giving the NLP model plenty of tokens to analyze.
+    """
+    # Ambiguous variables to trigger the 'Ambiguous Name' smell
+    a = 10
+    b = 20
+    x = [i for i in range(a)]
+    y = []
+    
+    # Complex logic loop
+    for i in x:
+        try:
+            # Mathematical operation
+            z = math.sqrt(i) * (a / b)
+            p = z ** 2
+            q = math.factorial(int(z))
+            y.append({"id": i, "val": p, "fact": q})
+        except Exception as e:
+            print(f"Error at index {i}: {e}")
+            continue
 
-    def calculate_recursive_factorial(self, n):
-        # Smell: Short variable name 'n'
-        if n == 0:
-            return 1
+    # More logic to increase line count
+    results = []
+    for item in y:
+        if item["val"] > 5:
+            results.append(item)
         else:
-            return n * self.calculate_recursive_factorial(n-1)
+            item["val"] = 0
+            results.append(item)
 
-    def process_and_analyze_complex_dataset_with_logic(self, val, multiplier):
-        # Smell: Long Method (Intentionally stretched logic)
-        a = val
-        b = multiplier
-        
-        # Complex calculation block
-        res = (a * b) + math.sqrt(a)
-        final_list = []
-        
-        # Unnecessarily long loop to trigger the 'Long Method' smell
-        for i in range(10):
-            x = res * (i + 1)
-            y = x / 2
-            z = y + self.calculate_recursive_factorial(5)
-            
-            if z > 100:
-                final_list.append(z)
-            
-            # Deeply nested logic
-            if len(final_list) > 2:
-                for item in final_list:
-                    p = item * 0.1
-                    q = p + math.sin(p)
-                    print(f"Computed trace: {q}")
-        
-        return final_list
+    return results
 
-# Execution
-data_obj = DataProcessor([1, 2, 3])
-output = data_obj.process_and_analyze_complex_dataset_with_logic(10, 5)
-print("Analysis Complete:", output)
+def main():
+    raw_data = "{\"data\": [1, 2, 3, 4, 5]}"
+    parsed = json.loads(raw_data)
+    final_output = process_and_analyze_complex_dataset_with_logic(parsed)
+    print(f"Analysis complete. Found {len(final_output)} items.")
+
+if __name__ == "__main__":
+    main()
