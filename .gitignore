@@ -1,0 +1,8 @@
+nlp_env_stable/
+nlp_final/
+__pycache__/
+.cache/
+*.exe
+*.dll
+*.bin
+*.safetensors
