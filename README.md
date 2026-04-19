@@ -1,8 +1,8 @@
-# NLP-Based Code Semantic Analyzer 🚀
+# NLP-Based Code Semantic Analyzer 
 
 A sophisticated hybrid tool that combines **Abstract Syntax Tree (AST)** static analysis with **Transformer-based Natural Language Processing** to provide deep insights into Python source code.
 
-## 🌟 Key Features
+##  Key Features
 - **Semantic Summarization:** Utilizes the `Salesforce/codet5-small` Transformer model to generate human-readable summaries of complex logic.
 - **Static Code Analysis:** Parses Python AST to identify technical debt, including:
   - Long Method detection (25+ lines).
@@ -12,7 +12,7 @@ A sophisticated hybrid tool that combines **Abstract Syntax Tree (AST)** static 
 
 ---
 
-## 🧠 Theoretical Framework
+##  Theoretical Framework
 
 ### 1. Transformer Architecture (Encoder-Decoder)
 The project utilizes a **Transformer** model, specifically **CodeT5**. Unlike older RNN or LSTM models, Transformers use a **Self-Attention Mechanism**. This allows the model to weigh the importance of different parts of the code simultaneously. 
@@ -41,7 +41,7 @@ During summary generation, the model must choose the most likely next word.
 
 ---
 
-## 🚀 Installation & Setup
+##  Installation & Setup
 
 1. **Clone the Repository:**
    ```powershell
@@ -57,7 +57,7 @@ Install Dependencies:
 
 PowerShell
 pip install torch transformers
-📊 Usage Example
+ Usage Example
 Run the analyzer on any Python file (e.g., test.py):
 
 PowerShell
@@ -72,14 +72,14 @@ Long Method: 'process_and_analyze_complex_dataset_with_logic' (26 lines)
 
 Ambiguous Variable Name: 'a'
 
-🛡️ Project Challenges Solved
+ Project Challenges Solved
 Git Bloat: Successfully managed repository size by excluding 200MB+ PyTorch binaries using specialized .gitignore rules.
 
 Model Hallucination: Solved "Repetition Loops" in small Transformer models by implementing a Regex-based validation fallback.
 
 Semantic Gap: Bridged the gap between computer instructions and human intent through fine-tuned prompting and attention steering.
 
-👨‍💻 Author
+ Author
 Your Name NLP & Software Engineering Student
 
 
